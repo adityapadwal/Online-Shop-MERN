@@ -15,6 +15,8 @@ const shopRoutes = require('./routes/shop.js');
 // Importing errors controller
 const errorController = require('./controllers/error.js');
 
+const db = require('./util/database');
+
 // Creating an express application and putting it in a const
 // by running it as a function
 // this app constant also happens to be a valid request handler
