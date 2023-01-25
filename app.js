@@ -4,8 +4,6 @@ const express = require("express");
 const path = require("path");
 // Importing body-parser
 const bodyParser = require("body-parser");
-// Importing Handlebars
-// const expressHbs = require("express-handlebars");
 
 // Importing adminRoutes.js from routes folder
 const adminRoutes = require("./routes/admin.js");
@@ -52,7 +50,7 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-// ***Associations/Relations***
+// ***Sequelize Associations/Relations***
 Product.belongsTo(User, { constraints: true, onDelete: "CASCADE" });          // This will add userId to the Product table
 User.hasMany(Product);
 User.hasOne(Cart);

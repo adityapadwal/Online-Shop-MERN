@@ -13,12 +13,11 @@ const router = express.Router();
 // This will match to /admin/add-product => GET
 router.get('/add-product', adminController.getAddProduct); 
 
-// This will match to /admin/products => GET
-router.get('/products', adminController.getProducts); 
-
-
 // This will match to /admin/add-product => POST
 router.post('/add-product', adminController.postAddProduct);
+
+// This will match to /admin/products => GET
+router.get('/products', adminController.getProducts); 
 
 router.get('/edit-product/:productId', adminController.getEditProduct);
 
